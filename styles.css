@@ -114,17 +114,7 @@ body {
     position: relative;
 }
 
-.navbar-brand::after {
-    content: '</>';
-    position: absolute;
-    top: 0;
-    right: -30px;
-    font-size: 1rem;
-    opacity: 0.8;
-    background: var(--gradient-accent);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+
 
 .nav-link {
     font-weight: 500;
