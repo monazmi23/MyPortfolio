@@ -13,7 +13,6 @@ window.addEventListener('scroll', function() {
         document.querySelector('.navbar').classList.remove('scrolled');
     }
 });
-
 // Initialize Particles.js
 particlesJS('particles-js', {
     particles: {
