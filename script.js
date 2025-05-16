@@ -90,4 +90,25 @@ particlesJS('particles-js', {
         }
     },
     retina_detect: true
-}); 
+});
+
+// Visitor Counter using CountAPI
+const countVisitor = async () => {
+    try {
+        // Create a unique namespace using your domain or a unique identifier
+        const namespace = 'portfolio-nazmi';
+        const key = 'visits';
+        
+        // First, get the current count
+        const response = await fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`);
+        const data = await response.json();
+        
+        // Update the counter in the DOM
+        document.getElementById('visits').textContent = data.value.toLocaleString();
+    } catch (error) {
+        console.error('Error counting visitor:', error);
+    }
+};
+
+// Call the function when the page loads
+document.addEventListener('DOMContentLoaded', countVisitor); 
