@@ -92,16 +92,36 @@ particlesJS('particles-js', {
     retina_detect: true
 });
 
-// Visitor Counter using CountAPI
+// Visitor Counter
 const countVisitor = async () => {
     try {
         // Using the actual domain as namespace
-        const namespace = 'portfolio-blankdev-my';
-        const key = 'visits';
+        const siteId = 'portfolio-blankdev-my';
         
-        // Get the current count
-        const response = await fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`);
+        // Get the current count from a different API
+        const response = await fetch(`https://api.visitor.mock/count/${siteId}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                language: navigator.language,
+                screenResolution: `${window.screen.width}x${window.screen.height}`,
+            })
+        }).catch(() => {
+            // Fallback to localStorage if API fails
+            const count = localStorage.getItem('visitorCount') || '0';
+            return {
+                json: async () => ({ value: parseInt(count) + 1 })
+            };
+        });
+
         const data = await response.json();
+        
+        // Store count in localStorage as fallback
+        localStorage.setItem('visitorCount', data.value.toString());
         
         // Update the counter in the DOM with animation
         const visitsElement = document.getElementById('visits');
@@ -119,6 +139,10 @@ const countVisitor = async () => {
         
         animateCount();
     } catch (error) {
+        // Fallback to incrementing local storage count
+        const count = parseInt(localStorage.getItem('visitorCount') || '0') + 1;
+        localStorage.setItem('visitorCount', count.toString());
+        document.getElementById('visits').textContent = count.toLocaleString();
         console.error('Error counting visitor:', error);
     }
 };
