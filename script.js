@@ -91,3 +91,42 @@ particlesJS('particles-js', {
     },
     retina_detect: true
 });
+
+// Visitor Counter
+document.addEventListener('DOMContentLoaded', function() {
+    // Generate a unique key for your website
+    const NAMESPACE = 'portfolio.blankdev.my';
+    const KEY = 'visitors';
+    
+    // Function to format numbers with commas
+    function formatNumber(num) {
+        return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    
+    // Function to update visitor count
+    async function updateVisitorCount() {
+        try {
+            // First, try to get the count
+            const response = await fetch(`https://api.countapi.xyz/get/${NAMESPACE}/${KEY}`);
+            const data = await response.json();
+            
+            if (data.value === undefined) {
+                // If the key doesn't exist, create it
+                const initResponse = await fetch(`https://api.countapi.xyz/create?namespace=${NAMESPACE}&key=${KEY}&value=1`);
+                const initData = await initResponse.json();
+                document.getElementById('visitorCount').textContent = formatNumber(initData.value);
+            } else {
+                // If it exists, increment it
+                const hitResponse = await fetch(`https://api.countapi.xyz/hit/${NAMESPACE}/${KEY}`);
+                const hitData = await hitResponse.json();
+                document.getElementById('visitorCount').textContent = formatNumber(hitData.value);
+            }
+        } catch (error) {
+            console.error('Error updating visitor count:', error);
+            document.getElementById('visitorCount').textContent = 'Error';
+        }
+    }
+    
+    // Update the visitor count when the page loads
+    updateVisitorCount();
+});

@@ -615,3 +615,26 @@ body {
         padding: 0 1rem;
     }
 }
+
+/* Visitor Counter */
+.visitor-counter {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--light-color);
+    opacity: 0.9;
+    transition: all 0.3s ease;
+}
+
+.visitor-counter:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.visitor-counter i {
+    color: var(--accent-color);
+}
+
+#visitorCount {
+    font-weight: bold;
+    color: var(--accent-color);
+}
