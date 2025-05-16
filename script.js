@@ -94,9 +94,9 @@ particlesJS('particles-js', {
 
 // Visitor Counter
 document.addEventListener('DOMContentLoaded', function() {
-    // Generate a unique key for your website
-    const NAMESPACE = 'portfolio.blankdev.my';
-    const KEY = 'visitors';
+    // Generate a unique key for your website (URL encoded)
+    const NAMESPACE = encodeURIComponent('portfolio.blankdev.my');
+    const KEY = encodeURIComponent('visitors');
     
     // Function to format numbers with commas
     function formatNumber(num) {
@@ -106,24 +106,27 @@ document.addEventListener('DOMContentLoaded', function() {
     // Function to update visitor count
     async function updateVisitorCount() {
         try {
-            // First, try to get the count
-            const response = await fetch(`https://api.countapi.xyz/get/${NAMESPACE}/${KEY}`);
-            const data = await response.json();
+            // Use a single hit request instead of separate get/create
+            const response = await fetch(`https://api.countapi.xyz/hit/${NAMESPACE}/${KEY}`);
             
-            if (data.value === undefined) {
-                // If the key doesn't exist, create it
-                const initResponse = await fetch(`https://api.countapi.xyz/create?namespace=${NAMESPACE}&key=${KEY}&value=1`);
-                const initData = await initResponse.json();
-                document.getElementById('visitorCount').textContent = formatNumber(initData.value);
-            } else {
-                // If it exists, increment it
-                const hitResponse = await fetch(`https://api.countapi.xyz/hit/${NAMESPACE}/${KEY}`);
-                const hitData = await hitResponse.json();
-                document.getElementById('visitorCount').textContent = formatNumber(hitData.value);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
             }
+            
+            const data = await response.json();
+            document.getElementById('visitorCount').textContent = formatNumber(data.value || 0);
+            
         } catch (error) {
             console.error('Error updating visitor count:', error);
-            document.getElementById('visitorCount').textContent = 'Error';
+            // Try alternative endpoint if first one fails
+            try {
+                const altResponse = await fetch(`https://api.countapi.xyz/create?namespace=${NAMESPACE}&key=${KEY}&value=1`);
+                const altData = await altResponse.json();
+                document.getElementById('visitorCount').textContent = formatNumber(altData.value || 1);
+            } catch (altError) {
+                console.error('Alternative endpoint also failed:', altError);
+                document.getElementById('visitorCount').textContent = '1';
+            }
         }
     }
     
