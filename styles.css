@@ -637,4 +637,23 @@ body {
     color: var(--accent-color);
     font-weight: bold;
     margin: 0 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section-padding {
+        padding: 60px 0;
+    }
+    
+    .hero-section {
+        height: 80vh;
+    }
+    
+    .skill-card {
+        margin-bottom: 30px;
+    }
+    
+    .navbar-brand::after {
+        display: none;
+    }
 } 

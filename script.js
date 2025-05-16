@@ -95,16 +95,29 @@ particlesJS('particles-js', {
 // Visitor Counter using CountAPI
 const countVisitor = async () => {
     try {
-        // Create a unique namespace using your domain or a unique identifier
-        const namespace = 'portfolio-nazmi';
+        // Using the actual domain as namespace
+        const namespace = 'portfolio-blankdev-my';
         const key = 'visits';
         
-        // First, get the current count
+        // Get the current count
         const response = await fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`);
         const data = await response.json();
         
-        // Update the counter in the DOM
-        document.getElementById('visits').textContent = data.value.toLocaleString();
+        // Update the counter in the DOM with animation
+        const visitsElement = document.getElementById('visits');
+        const targetCount = data.value;
+        let currentCount = 0;
+        
+        // Animate the counter
+        const animateCount = () => {
+            if (currentCount < targetCount) {
+                currentCount = Math.min(currentCount + Math.ceil(targetCount / 50), targetCount);
+                visitsElement.textContent = currentCount.toLocaleString();
+                requestAnimationFrame(animateCount);
+            }
+        };
+        
+        animateCount();
     } catch (error) {
         console.error('Error counting visitor:', error);
     }
