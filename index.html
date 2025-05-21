@@ -10,33 +10,33 @@
     <link href="styles.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#home">Portfolio</a>
+            <a class="navbar-brand" href="#home">PORTFOLIO</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
+                        <a class="nav-link" href="#home">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
+                        <a class="nav-link" href="#about">ABOUT</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
+                        <a class="nav-link" href="#skills">SKILLS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
+                        <a class="nav-link" href="#projects">PROJECTS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <a class="nav-link" href="#contact">CONTACT</a>
                     </li>   
                 </ul>
             </div>
@@ -45,39 +45,24 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero-section">
-        <!-- Particles.js container -->
-        <div id="particles-js"></div>
+        <div class="hero-pattern"></div>
         
-        <!-- Code animations -->
-        <div class="code-animation" style="top: 15%; left: 10%;">function init() </div>
-        <div class="code-animation" style="top: 35%; left: 75%;">const developer = new Developer();</div>
-        <div class="code-animation" style="top: 55%; left: 10%;">while(true) { learn(); code(); }</div>
-        <div class="code-animation" style="top: 75%; left: 65%;">console.log("Debugging...");</div>
+        <!-- Decorative Elements -->
+        <div class="hero-decoration hero-decoration-1"></div>
+        <div class="hero-decoration hero-decoration-2"></div>
+        <div class="hero-decoration hero-decoration-3"></div>
+        <div class="cat-wrapper">
+            <img src="images/cat.jpg" alt="Cat Decoration" class="hero-decoration hero-decoration-cat" id="cat-image">
+        </div>
+        <div id="walking-cat-container"></div>
         
-        <!-- Additional code snippets -->
-        <div class="code-animation code-float-1" style="top: 25%; left: 40%;">if(coffee.isEmpty()) {</div>
-        <div class="code-animation code-float-2" style="top: 45%; left: 85%;">  refill();</div>
-        <div class="code-animation code-float-1" style="top: 65%; left: 30%;">}</div>
-        
-        <div class="code-animation code-float-2" style="top: 10%; left: 60%;">// Debug like a detective</div>
-        <div class="code-animation code-float-1" style="top: 85%; left: 15%;">// Code like a ninja</div>
-        
-        <div class="code-animation code-float-2" style="top: 30%; left: 5%;">class Innovation {</div>
-        <div class="code-animation code-float-1" style="top: 75%; left: 45%;">  createTheFuture();</div>
-        <div class="code-animation code-float-2" style="top: 70%; left: 90%;">}</div>
-        <div class="container h-100">
-            <div class="row h-100 align-items-center">
-                <div class="col-12 text-center hero-content">
-                    <h1 class="display-4 fw-bold" data-aos="fade-down" data-aos-delay="200">Welcome to My Portfolio</h1>
-                    <p class="lead typing-text" data-aos="fade-up" data-aos-delay="400">Software Engineering Student | Developer | Problem Solver</p>
-                    <div mt-4>
-                        <a href="#about" class="btn btn-primary btn-lg mt-4" data-aos="fade-up" data-aos-delay="600">
-                            <i class="fas fa-code me-2"></i>Learn More
-                        </a>
-                    </div>
-                    
-                </div>
-
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">SOFTWARE ENGINEER</h1>
+                <p class="hero-subtitle">PROBLEM SOLVER | DEVELOPER | CREATOR</p>
+                <a href="#about" class="hero-btn">
+                    <i class="fas fa-code me-2"></i>EXPLORE
+                </a>
             </div>
         </div>
     </section>
@@ -85,53 +70,49 @@
     <!-- About Section -->
     <section id="about" class="section-padding">
         <div class="container">
-            <h2 class="text-center mb-5" data-aos="fade-up">About Me</h2>
+            <h2 class="text-center mb-5">ABOUT ME</h2>
             <div class="row">
-                <div class="col-md-6" data-aos="fade-right" data-aos-delay="200">
+                <div class="col-md-6">
                     <div class="flip-card">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
                                 <img src="images/profile.png" alt="Profile Picture">
+                                <h3 class="mt-3">HOVER TO KNOW MORE</h3>
                             </div>
                             <div class="flip-card-back">
-                                <h3><i class="fas fa-user-circle me-2"></i>About Me</h3>
+                                <h3>WHO AM I?</h3>
                                 <ul>
-                                    <li><strong><i class="fas fa-user me-2"></i>Name:</strong> Mohd Nazmi Norman</li>
-                                    <li><strong><i class="fas fa-calendar me-2"></i>Age:</strong> 23 Years Old</li>
-                                    <li><strong><i class="fas fa-map-marker-alt me-2"></i>Location:</strong> Sabah, Malaysia</li>
-                                    <li><strong><i class="fas fa-language me-2"></i>Languages:</strong> English, Malay</li>
-                                    <li><strong><i class="fas fa-graduation-cap me-2"></i>Education:</strong> Software Engineering</li>
-                                    <li><strong><i class="fas fa-university me-2"></i>University:</strong> Universiti Malaysia Sabah</li>
+                                    <li><strong>NAME:</strong> Mohd Nazmi Norman</li>
+                                    <li><strong>AGE:</strong> 23 Years Old</li>
+                                    <li><strong>LOCATION:</strong> Sabah, Malaysia</li>
+                                    <li><strong>LANGUAGES:</strong> English, Malay</li>
+                                    <li><strong>EDUCATION:</strong> Software Engineering</li>
+                                    <li><strong>UNIVERSITY:</strong> Universiti Malaysia Sabah</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6" data-aos="fade-left" data-aos-delay="400">
-                    <h3><i class="fas fa-terminal me-2"></i>Who am I?</h3>
-                    <p>I am a passionate software engineering student with a strong foundation in various programming languages and technologies. I love solving complex problems and creating efficient solutions.</p>
-                    
-                    <div class="personal-info mt-4">
-                        <h4><i class="fas fa-user me-2"></i>Personal Details</h4>
-                        <ul class="list-unstyled">
-                            <li><strong>Name:</strong> Mohd Nazmi Norman</li>
-                            <li><strong>Age:</strong> 23 Years Old</li>
-                            <li><strong>Location:</strong> Sabah, Malaysia</li>
-                            <li><strong>Languages:</strong> English, Malay</li>
-                        </ul>
-                    </div>
-
-                    <div class="education mt-4">
-                        <h4><i class="fas fa-graduation-cap me-2"></i>Education</h4>
-                        <p><strong>Bachelor of Computer Science in Software Engineering</strong><br>
-                        Universiti Malaysia Sabah<br>
-                        Expected Graduation: 2025</p>
-                        <p><strong>Kolej Matrikulasi Labuan</strong><br>
-                            Science Stream Module II<br>
-                            2020 - 2021</p>
-                            <p><strong>MRSM Tun Mohammad Fuad Stephens</strong><br>
-                                Science Stream<br>
-                               2015 - 2019</p>
+                <div class="col-md-6">
+                    <div class="about-content">
+                        <h3>MY STORY</h3>
+                        <p>I am a passionate software engineering student with a strong foundation in various programming languages and technologies. I love solving complex problems and creating efficient solutions.</p>
+                        
+                        <div class="education">
+                            <h4>EDUCATION</h4>
+                            <div class="education-item">
+                                <h5>Bachelor of Computer Science in Software Engineering</h5>
+                                <p>Universiti Malaysia Sabah<br>Expected Graduation: 2025</p>
+                            </div>
+                            <div class="education-item">
+                                <h5>Kolej Matrikulasi Labuan</h5>
+                                <p>Science Stream Module II<br>2020 - 2021</p>
+                            </div>
+                            <div class="education-item">
+                                <h5>MRSM Tun Mohammad Fuad Stephens</h5>
+                                <p>Science Stream<br>2015 - 2019</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -139,44 +120,29 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="section-padding bg-light">
+    <section id="skills" class="section-padding">
         <div class="container">
-            <h2 class="text-center mb-5" data-aos="fade-up"><i class="fas fa-laptop-code me-2"></i>Technical Skills</h2>
+            <h2 class="text-center mb-5">TECHNICAL SKILLS</h2>
             <div class="row">
-                <div class="col-md-4 mb-4" data-aos="flip-left" data-aos-delay="200">
+                <div class="col-md-4 mb-4">
                     <div class="skill-card">
-                        <i class="fas fa-code fa-3x mb-3"></i>
-                        <h4>Programming Languages</h4>
+                        <i class="fas fa-code"></i>
+                        <h4>PROGRAMMING</h4>
                         <p>Java, Python, JavaScript, C++</p>
-                        <div class="skill-level mt-3">
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 85%"></div>
-                            </div>
-                        </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4" data-aos="flip-left" data-aos-delay="400">
+                <div class="col-md-4 mb-4">
                     <div class="skill-card">
-                        <i class="fas fa-laptop-code fa-3x mb-3"></i>
-                        <h4>Web Development</h4>
+                        <i class="fas fa-laptop-code"></i>
+                        <h4>WEB DEVELOPMENT</h4>
                         <p>HTML5, CSS3, JavaScript, PHP, Laravel</p>
-                        <div class="skill-level mt-3">
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 90%"></div>
-                            </div>
-                        </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4" data-aos="flip-left" data-aos-delay="600">
+                <div class="col-md-4 mb-4">
                     <div class="skill-card">
-                        <i class="fas fa-database fa-3x mb-3"></i>
-                        <h4>Databases</h4>
-                        <p>MySQL, MariaDB, SQlite</p>
-                        <div class="skill-level mt-3">
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 80%"></div>
-                            </div>
-                        </div>
+                        <i class="fas fa-database"></i>
+                        <h4>DATABASES</h4>
+                        <p>MySQL, MariaDB, SQLite</p>
                     </div>
                 </div>
             </div>
@@ -186,46 +152,38 @@
     <!-- Projects Section -->
     <section id="projects" class="section-padding">
         <div class="container">
-            <h2 class="text-center mb-5" data-aos="fade-up"><i class="fas fa-code-branch me-2"></i>My Projects</h2>
+            <h2 class="text-center mb-5">MY PROJECTS</h2>
             <div class="row">
-                <div class="col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="200">
+                <div class="col-md-6 mb-4">
                     <div class="project-card">
-                        <div class="project-image-container">
-                            <img src="images/project1.png" class="card-img-top" alt="Project 1">
-                            <div class="project-overlay">
-                                <div class="project-tech">
-                                    <span class="badge bg-primary">Laravel</span>
-                                    <span class="badge bg-secondary">Tailwind CSS</span>
-                                    <span class="badge bg-info">MariaDB</span>
-                                </div>
-                            </div>
-                        </div>
+                        <img src="images/project1.png" class="card-img-top" alt="Project 1">
                         <div class="card-body">
-                            <h5 class="card-title">FYP Project: MyHealthPal Personalized Health Tracking System</h5>
-                            <p class="card-text">MyHealthPal is a personalized health tracking system designed to monitor and analyze health metrics using Laravel, Tailwind CSS, and MariaDB. It provides users with insights into their medication tracking and helps them make informed decisions.</p>
-                            <a href="#" class="btn btn-primary">
-                                <i class="fas fa-external-link-alt me-2"></i>View Project
+                            <h5>MyHealthPal</h5>
+                            <p>Personalized Health Tracking System</p>
+                            <div class="project-tech">
+                                <span>Laravel</span>
+                                <span>Tailwind CSS</span>
+                                <span>MariaDB</span>
+                            </div>
+                            <a href="#" class="btn mt-3">
+                                <i class="fas fa-external-link-alt me-2"></i>VIEW PROJECT
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="400">
+                <div class="col-md-6 mb-4">
                     <div class="project-card">
-                        <div class="project-image-container">
-                            <img src="images/project2.png" class="card-img-top" alt="Project 2">
-                            <div class="project-overlay">
-                                <div class="project-tech">
-                                    <span class="badge bg-primary">Python</span>
-                                    <span class="badge bg-secondary">Flask</span>
-                                    <span class="badge bg-info">Recommendation</span>
-                                </div>
-                            </div>
-                        </div>
+                        <img src="images/project2.png" class="card-img-top" alt="Project 2">
                         <div class="card-body">
-                            <h5 class="card-title">Data training for Machine Learning</h5>
-                            <p class="card-text">This project involves training data for machine learning models using Python and Flask. It focuses on building a recommendation system to enhance user experience.</p>
-                            <a href="#" class="btn btn-primary">
-                                <i class="fas fa-external-link-alt me-2"></i>View Project
+                            <h5>ML Training</h5>
+                            <p>Machine Learning Data Training</p>
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>Flask</span>
+                                <span>ML</span>
+                            </div>
+                            <a href="#" class="btn mt-3">
+                                <i class="fas fa-external-link-alt me-2"></i>VIEW PROJECT
                             </a>
                         </div>
                     </div>
@@ -235,46 +193,38 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section-padding bg-light">
+    <section id="contact" class="section-padding">
         <div class="container">
-            <h2 class="text-center mb-5" data-aos="fade-up"><i class="fas fa-envelope me-2"></i>Let's Connect</h2>
+            <h2 class="text-center mb-5">LET'S CONNECT</h2>
             <div class="row justify-content-center">
-                <div class="col-md-8" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-md-8">
                     <div class="contact-grid">
-
-                        <!-- Github -->
-                        <a href="https://github.com/monazmi23" class="contact-card github" target="_blank">
+                        <a href="https://github.com/monazmi23" class="contact-card" target="_blank">
                             <div class="contact-icon">
                                 <i class="fab fa-github"></i>
                             </div>
-                            <h3>Github</h3>
+                            <h3>GITHUB</h3>
                             <p>monazmi23</p>
                         </a>
-                        <!-- Instagram -->
-                        <a href="https://www.instagram.com/monazmi._/" class="contact-card instagram" target="_blank">
+                        <a href="https://www.instagram.com/monazmi._/" class="contact-card" target="_blank">
                             <div class="contact-icon">
                                 <i class="fab fa-instagram"></i>
                             </div>
-                            <h3>Instagram</h3>
+                            <h3>INSTAGRAM</h3>
                             <p>@monazmi23</p>
                         </a>
-
-                        <!-- Email -->
-                        <a href="mailto:bblankdev@gmail.com" class="contact-card email">
+                        <a href="mailto:bblankdev@gmail.com" class="contact-card">
                             <div class="contact-icon">
                                 <i class="fas fa-envelope"></i>
                             </div>
-                            <h3>Email</h3>
+                            <h3>EMAIL</h3>
                             <p>bblankdev@gmail.com</p>
-                            <p>mohdnazmi081@gmail.com</p>
-                        </a>    
-
-                        <!-- Phone -->
-                        <a href="tel:+60137109952" class="contact-card phone">
+                        </a>
+                        <a href="tel:+60137109952" class="contact-card">
                             <div class="contact-icon">
                                 <i class="fas fa-phone"></i>
                             </div>
-                            <h3>Phone</h3>
+                            <h3>PHONE</h3>
                             <p>+60 13-710-9952</p>
                         </a>
                     </div>
@@ -284,24 +234,24 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-4">
+    <footer class="text-center py-4">
         <div class="container">
             <div class="social-links mb-3">
-                <a href="https://github.com/monazmi23" class="text-white"><i class="fab fa-github"></i></a>
-                <a href="https://my.linkedin.com/in/mohd-nazmi-norman-32ab41190" class="text-white"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/monazmi23"><i class="fab fa-github"></i></a>
+                <a href="https://my.linkedin.com/in/mohd-nazmi-norman-32ab41190"><i class="fab fa-linkedin"></i></a>
             </div>
-            <p><i class="fas fa-code me-2"></i>&copy; 2025 Mohd Nazmi Norman. All rights reserved.</p>
+            <p>&copy; 2025 Mohd Nazmi Norman. All rights reserved.</p>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <!-- Bootstrap JS and dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- AOS Animation Library -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- Particles.js -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <!-- Custom JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/DRACOLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/OBJLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/MTLLoader.js"></script>
     <script src="script.js"></script>
+    <script src="cat3d.js"></script>
 </body>
 </html> 

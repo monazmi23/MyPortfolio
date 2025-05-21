@@ -1,10 +1,3 @@
-// Initialize AOS
-AOS.init({
-    duration: 1000,
-    once: true,
-    mirror: false
-});
-
 // Navbar color change on scroll
 window.addEventListener('scroll', function() {
     if (window.scrollY > 50) {
@@ -13,80 +6,46 @@ window.addEventListener('scroll', function() {
         document.querySelector('.navbar').classList.remove('scrolled');
     }
 });
-// Initialize Particles.js
-particlesJS('particles-js', {
-    particles: {
-        number: {
-            value: 80,
-            density: {
-                enable: true,
-                value_area: 800
-            }
-        },
-        color: {
-            value: '#60a5fa'
-        },
-        shape: {
-            type: 'circle'
-        },
-        opacity: {
-            value: 0.5,
-            random: false,
-            anim: {
-                enable: false
-            }
-        },
-        size: {
-            value: 3,
-            random: true,
-            anim: {
-                enable: false
-            }
-        },
-        line_linked: {
-            enable: true,
-            distance: 150,
-            color: '#60a5fa',
-            opacity: 0.4,
-            width: 1
-        },
-        move: {
-            enable: true,
-            speed: 2,
-            direction: 'none',
-            random: false,
-            straight: false,
-            out_mode: 'out',
-            bounce: false,
-            attract: {
-                enable: false
-            }
-        }
-    },
-    interactivity: {
-        detect_on: 'canvas',
-        events: {
-            onhover: {
-                enable: true,
-                mode: 'grab'
-            },
-            onclick: {
-                enable: true,
-                mode: 'push'
-            },
-            resize: true
-        },
-        modes: {
-            grab: {
-                distance: 140,
-                line_linked: {
-                    opacity: 1
-                }
-            },
-            push: {
-                particles_nb: 4
-            }
-        }
-    },
-    retina_detect: true
+
+// Add hover effect to cards
+document.querySelectorAll('.skill-card, .project-card, .contact-card').forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translate(8px, 8px)';
+        this.style.boxShadow = '0 0 0 var(--dark-color)';
+    });
+
+    card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translate(0, 0)';
+        this.style.boxShadow = '8px 8px 0 var(--dark-color)';
+    });
+});
+
+// Add click effect to buttons
+document.querySelectorAll('.btn').forEach(button => {
+    button.addEventListener('mousedown', function() {
+        this.style.transform = 'translate(4px, 4px)';
+        this.style.boxShadow = '4px 4px 0 var(--dark-color)';
+    });
+
+    button.addEventListener('mouseup', function() {
+        this.style.transform = 'translate(8px, 8px)';
+        this.style.boxShadow = '0 0 0 var(--dark-color)';
+    });
+
+    button.addEventListener('mouseleave', function() {
+        this.style.transform = 'translate(0, 0)';
+        this.style.boxShadow = '8px 8px 0 var(--dark-color)';
+    });
+});
+
+// Add random rotation to elements on hover
+document.querySelectorAll('.skill-card, .project-card').forEach(element => {
+    element.addEventListener('mouseenter', function() {
+        const randomRotation = Math.random() * 4 - 2; // Random rotation between -2 and 2 degrees
+        this.style.transform = `translate(8px, 8px) rotate(${randomRotation}deg)`;
+    });
+
+    element.addEventListener('mouseleave', function() {
+        this.style.transform = 'translate(0, 0) rotate(0deg)';
+    });
 });
