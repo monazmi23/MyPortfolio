@@ -1324,3 +1324,14 @@ canvas {
         min-height: -webkit-fill-available;
     }
 }
+
+.visitor-stats {
+    font-family: 'Space Grotesk', sans-serif;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.visitor-stats span {
+    font-weight: 600;
+    color: #333;
+}

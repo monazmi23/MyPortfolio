@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /images/
+
+# Sitemap
+Sitemap: https://monazmi23.github.io/Portfolio/sitemap.xml 
