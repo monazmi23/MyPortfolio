@@ -7,6 +7,7 @@ class VisitorAPI {
             screenResolution: `${window.screen.width}x${window.screen.height}`,
             sessionId: this.generateSessionId()
         };
+        this.updateDisplay(); // Add initial display update
     }
 
     generateSessionId() {
@@ -18,6 +19,7 @@ class VisitorAPI {
     }
 
     async trackPageView() {
+        // Store in localStorage with expiration
         const expirationDays = 30;
         const expirationDate = new Date();
         expirationDate.setDate(expirationDate.getDate() + expirationDays);
@@ -27,8 +29,13 @@ class VisitorAPI {
         localStorage.setItem('lastVisit', new Date().toISOString());
         localStorage.setItem('dataExpiration', expirationDate.toISOString());
         
+        // Clean up expired data
         this.cleanExpiredData();
         
+        // Update the display immediately after tracking
+        this.updateDisplay();
+        
+        // Dispatch custom event
         const event = new CustomEvent('visitorTracked', { 
             detail: {
                 pageViews: pageViews,
@@ -79,4 +86,7 @@ class VisitorAPI {
 document.addEventListener('DOMContentLoaded', () => {
     const visitor = new VisitorAPI();
     visitor.trackPageView();
+
+    // Update display every minute to keep it current
+    setInterval(() => visitor.updateDisplay(), 60000);
 }); 

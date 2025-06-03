@@ -1327,11 +1327,25 @@ canvas {
 
 .visitor-stats {
     font-family: 'Space Grotesk', sans-serif;
-    color: #666;
-    font-size: 0.9rem;
+    color: var(--light-color);
+    font-size: 1rem;
+    background: var(--dark-color);
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem auto;
+    max-width: 300px;
+}
+
+.visitor-stats p {
+    margin: 0.5rem 0;
+}
+
+.visitor-stats i {
+    color: var(--primary-color);
 }
 
 .visitor-stats span {
     font-weight: 600;
-    color: #333;
+    color: var(--secondary-color);
+    margin-left: 0.5rem;
 }
