@@ -24,19 +24,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#home">HOME</a>
+                        <a class="nav-link active" href="index.html">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">ABOUT</a>
+                        <a class="nav-link" href="about.html">ABOUT</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#skills">SKILLS</a>
+                        <a class="nav-link" href="project.html">PROJECTS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#projects">PROJECTS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">CONTACT</a>
+                        <a class="nav-link" href="contact.html">CONTACT</a>
                     </li>   
                 </ul>
             </div>
@@ -60,75 +57,29 @@
             <div class="hero-content">
                 <h1 class="hero-title">SOFTWARE ENGINEER</h1>
                 <p class="hero-subtitle">PROBLEM SOLVER | DEVELOPER | CREATOR | DESIGNER</p>
-                <a href="#about" class="hero-btn">
-                    <i class="fas fa-code me-2"></i>EXPLORE
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section-padding">
-        <div class="container">
-            <h2 class="text-center mb-5">ABOUT ME</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="images/profile.png" alt="Profile Picture">
-                                <h3 class="mt-3">HOVER TO KNOW MORE</h3>
-                            </div>
-                            <div class="flip-card-back">
-                                <h3>WHO AM I?</h3>
-                                <ul>
-                                    <li><strong>NAME:</strong> Mohd Nazmi Norman</li>
-                                    <li><strong>AGE:</strong> 23 Years Old</li>
-                                    <li><strong>LOCATION:</strong> Sabah, Malaysia</li>
-                                    <li><strong>LANGUAGES:</strong> English, Malay</li>
-                                    <li><strong>EDUCATION:</strong> Software Engineering</li>
-                                    <li><strong>UNIVERSITY:</strong> Universiti Malaysia Sabah</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="about-content">
-                        <h3>MY STORY</h3>
-                        <p>I am a passionate software engineering student with a strong foundation in various programming languages and technologies. I love solving complex problems and creating efficient solutions.</p>
-                        
-                        <div class="education">
-                            <h4>EDUCATION</h4>
-                            <div class="education-item">
-                                <h5>Bachelor of Computer Science in Software Engineering</h5>
-                                <p>Universiti Malaysia Sabah<br>Expected Graduation: 2025</p>
-                            </div>
-                            <div class="education-item">
-                                <h5>Kolej Matrikulasi Labuan</h5>
-                                <p>Science Stream Module II<br>2020 - 2021</p>
-                            </div>
-                            <div class="education-item">
-                                <h5>MRSM Tun Mohammad Fuad Stephens</h5>
-                                <p>Science Stream<br>2015 - 2019</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="hero-buttons">
+                    <a href="about.html" class="hero-btn me-3">
+                        <i class="fas fa-user me-2"></i>ABOUT ME
+                    </a>
+                    <a href="project.html" class="hero-btn">
+                        <i class="fas fa-code me-2"></i>MY WORK
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section-padding">
+    <!-- Skills Preview Section -->
+    <section class="section-padding">
         <div class="container">
-            <h2 class="text-center mb-5">TECHNICAL SKILLS</h2>
+            <h2 class="text-center mb-5">SKILLS OVERVIEW</h2>
             <div class="row">
                 <div class="col-md-4 mb-4">
                     <div class="skill-card">
                         <i class="fas fa-code"></i>
                         <h4>PROGRAMMING</h4>
                         <p>Java, Python, JavaScript, C++</p>
+                        <a href="about.html#skills" class="btn mt-3">LEARN MORE</a>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
@@ -136,6 +87,7 @@
                         <i class="fas fa-laptop-code"></i>
                         <h4>WEB DEVELOPMENT</h4>
                         <p>HTML5, CSS3, JavaScript, PHP, Laravel</p>
+                        <a href="about.html#skills" class="btn mt-3">LEARN MORE</a>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
@@ -143,16 +95,17 @@
                         <i class="fas fa-database"></i>
                         <h4>DATABASES</h4>
                         <p>MySQL, MariaDB, SQLite</p>
+                        <a href="about.html#skills" class="btn mt-3">LEARN MORE</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section-padding">
+    <!-- Featured Projects Preview -->
+    <section class="section-padding bg-light">
         <div class="container">
-            <h2 class="text-center mb-5">MY PROJECTS</h2>
+            <h2 class="text-center mb-5">FEATURED PROJECTS</h2>
             <div class="row">
                 <div class="col-md-6 mb-4">
                     <div class="project-card">
@@ -165,8 +118,8 @@
                                 <span>Tailwind CSS</span>
                                 <span>MariaDB</span>
                             </div>
-                            <a href="#" class="btn mt-3">
-                                <i class="fas fa-external-link-alt me-2"></i>VIEW PROJECT
+                            <a href="project.html#myHealthPal" class="btn mt-3">
+                                <i class="fas fa-external-link-alt me-2"></i>VIEW DETAILS
                             </a>
                         </div>
                     </div>
@@ -182,53 +135,31 @@
                                 <span>Flask</span>
                                 <span>ML</span>
                             </div>
-                            <a href="#" class="btn mt-3">
-                                <i class="fas fa-external-link-alt me-2"></i>VIEW PROJECT
+                            <a href="project.html#mlTraining" class="btn mt-3">
+                                <i class="fas fa-external-link-alt me-2"></i>VIEW DETAILS
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="text-center mt-4">
+                <a href="project.html" class="btn btn-lg">
+                    <i class="fas fa-project-diagram me-2"></i>VIEW ALL PROJECTS
+                </a>
+            </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section-padding">
+    <!-- Contact Preview -->
+    <section class="section-padding">
         <div class="container">
-            <h2 class="text-center mb-5">LET'S CONNECT</h2>
+            <h2 class="text-center mb-5">GET IN TOUCH</h2>
             <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <div class="contact-grid">
-                        <a href="https://github.com/monazmi23" class="contact-card" target="_blank">
-                            <div class="contact-icon">
-                                <i class="fab fa-github"></i>
-                            </div>
-                            <h3>GITHUB</h3>
-                            <p>monazmi23</p>
-                        </a>
-                        <a href="https://www.instagram.com/monazmi._/" class="contact-card" target="_blank">
-                            <div class="contact-icon">
-                                <i class="fab fa-instagram"></i>
-                            </div>
-                            <h3>INSTAGRAM</h3>
-                            <p>@monazmi23</p>
-                        </a>
-                        <a href="mailto:bblankdev@gmail.com" class="contact-card">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <h3>EMAIL</h3>
-                            <p>Work: bblankdev@gmail.com</p>
-                            <p>Personal: mohdnazmi081@gmail.com</p>
-                        </a>
-                        <a href="tel:+60137109952" class="contact-card">
-                            <div class="contact-icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <h3>PHONE</h3>
-                            <p>+60 13-710-9952</p>
-                        </a>
-                    </div>
+                <div class="col-md-8 text-center">
+                    <p class="mb-4">Interested in collaborating or have a project in mind? Let's discuss how we can work together!</p>
+                    <a href="contact.html" class="btn btn-lg">
+                        <i class="fas fa-envelope me-2"></i>CONTACT ME
+                    </a>
                 </div>
             </div>
         </div>
